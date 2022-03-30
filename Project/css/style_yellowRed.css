@@ -1,0 +1,75 @@
+body{
+
+    background-color: #C8D5B9 !important;
+    color: #4A7C59 !important;
+    font-weight: bold;
+    background-image: url("../img/golang.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+}
+
+
+
+.game{
+
+    background-color: lightgray;
+    border: 2px gray solid;
+    border-radius: 30px;
+    
+
+}
+
+td{
+    border : 1px black solid;
+    padding : 25px;
+    min-height: 150px;
+}
+
+table{
+
+    border-spacing: 20px;
+    border-collapse: separate;
+    
+}
+
+
+table, tr, td{
+
+    border-radius: 50px;
+    
+}
+
+tbody{
+    background-color: lightblue;
+}
+
+
+.player-turn{
+    text-align: center;
+}
+
+.player-turn-div{
+    margin: auto;
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+h1{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.turn-info{
+    margin: auto;
+    width: 50%;
+}
+
+button{
+   background-color: transparent;
+   border: 0px;
+}
+

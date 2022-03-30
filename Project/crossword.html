@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script>
+            var count = 0
+            function CheckAnswer(){
+                let answer = "'" + document.querySelector("input").value + "'";
+                 
+                for (let node of document.querySelectorAll("td")){
+                    if (node.className.indexOf(answer) >= 0){
+                        node.style = "color: white;";
+                    }
+                }
+                count++
+                
+                if (count > 5){
+                    alert("Congrats !")
+                }
+                document.querySelector("input").value = "";
+
+                
+            }
+        </script>
+        <style>
+            *
+            {
+                background-color: black;
+            }
+            table {
+                border-collapse: collapse;
+                width: 400px;
+                height: 400px;
+                margin-left: 500px;
+                border-color: white !important;
+                color: white !important;
+            }
+            td {
+                border: 1px solid white !important;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                color: black;
+            }
+
+            /* This makes all the empty squares black */
+            td:empty {
+                background: greenyellow;
+            }
+            /* This changes the position and color of the sup (small number relating to the clues) */
+            sup {
+                position: absolute;
+                color: yellow;
+                font-size: 8px;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: black;">
+        <h1 style="color: greenyellow; text-shadow: 2px 2px white; font-size: 50px";>GoLang <h1 style="color: white; background-color: greenyellow;  margin-right: 1200px; text-shadow: 2px 2px black; font-size: 40px">Crossword<h1><h1 style="color: greenyellow; text-shadow: 2px 2px white; font-size: 30px">Puzzle</h1>
+        <table style="border-color: white;">
+            <tr>
+                <td></td>
+                <td class="'golang' "><sup>1</sup>G</td>
+                <td></td>
+                <td></td>
+                <td class="'func'"><sup>3</sup>F</td>
+                <td class="'func'">U</td>
+                <td class="'func'">N</td>
+                <td class="'func'">C</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="'golang'">O</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="'golang' 'class'">L</td>
+                <td class="'struct'"><sup>4</sup>S</td>
+                <td class="'struct'">T</td>
+                <td class="'struct'">R</td>
+                <td class="'struct'">U</td>
+                <td class="'struct'">C</td>
+                <td class="'struct'">T</td>
+            </tr>
+
+            <tr>
+                <td class="'package'"><sup>2</sup>P</td>
+                <td class="'golang' 'package'">A</td>
+                <td class="'package'">C</td>
+                <td  class="'package'">K</td>
+                <td  class="'package' 'algos'"><sup>2</sup>A</td>
+                <td  class="'package'">G</td>
+                <td  class="'package'">E</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="'golang'">N</td>
+                <td></td>
+                <td></td>
+                <td class="'algos'">L</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="'golang' 'google'"><sup>1</sup>G</td>
+                <td class="'google'">O</td>
+                <td class="'google'">O</td>
+                <td class="'google' 'algos'">G</td>
+                <td class="'google'">L</td>
+                <td class="'google'">E</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="'algos'">O</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="'algos'">S</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <h2 style="color: greenyellow; font-weight: bold; text-decoration: underline ;">
+            Across
+        </h2>
+        <ol>
+            <li style="color: greenyellow;">Who created the GoLang programming language</li>
+            <li style="color: greenyellow;">A directory inside your Go workspace containing one or more Go source files</li>
+            <li style="color: greenyellow;" >A keyword in Go language, which is used to create a function.</li>
+            <li style="color: greenyellow;">A user-defined type that allows to group/combine items of possibly different types into a single type.</li>
+        </ol>
+        <h2 style="color: greenyellow; font-weight: bold; text-decoration: underline ;">
+            Down
+        </h2>
+        <ol>
+            <li style="color: greenyellow;">A programming language</li>
+            <li style="color: greenyellow;">A finite sequence of well-defined instructions, typically used to solve a class of specific problems or to perform a computation.</li>
+        </ol>
+        <form onsubmit="javascript:CheckAnswer()" action="javascript:nil">
+           <h5 style="color: greenyellow; font-weight: bold;">Type your answer, then click on enter to submit</h5>
+            <input style="color: greenyellow;" placeholder="Submit Answer"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+body{
+
+    background-color: #C8D5B9;
+    color: #4A7C59;
+    font-weight: bold;
+    background-image: url("../img/golang.png");
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+    background-position-x: 10px;
+}
