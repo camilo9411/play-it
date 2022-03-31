@@ -116,7 +116,6 @@ function checkWinner(currentPlayer){
     }
 
     return false
-
 }
 
 
@@ -174,7 +173,7 @@ function playWithTheComputer(currentPlayer, computerPlayer){
             count =0;
         }
 
-        //Block Rival
+        //Block Rival 
         if(currentPlayer.length >= 2 && currentPlayer.length < 5 ){
 
             var flag = false
@@ -213,12 +212,10 @@ function playWithTheComputer(currentPlayer, computerPlayer){
                 count =0;
             }
 
-
             //Random choose
             while(true){
 
                 let i = (Math.floor(Math.random() * 8) + 1).toString();
-                console.log(i)
                 if(!computerPlayer.includes(i) && !currentPlayer.includes(i)){
                     let str = "position_"+ i;
                     document.getElementById(str).click();
@@ -228,11 +225,7 @@ function playWithTheComputer(currentPlayer, computerPlayer){
                 }
             }
         }
-
     }
-
-
-
 }
 
 function resetGame(){
@@ -253,5 +246,4 @@ function resetGame(){
     }
     count=0;
     counter = 0;
-
 }
